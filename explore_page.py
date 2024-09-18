@@ -39,7 +39,9 @@ def clean_education(x):
 
 @st.cache_data
 def load_data():
-    df = pd.read_csv("https://drive.google.com/file/d/1QlRHofnX8U93Sphfx6xRZnY7qoIA9OwP/view?usp=sharing")
+    df = pd.read_csv("https://drive.google.com/uc?id=1QlRHofnX8U93Sphfx6xRZnY7qoIA9OwP&export=download")
+    #df = pd.read_csv("https://drive.google.com/file/d/1QlRHofnX8U93Sphfx6xRZnY7qoIA9OwP/view?usp=sharing")
+    #https://drive.google.com/uc?id=1QlRHofnX8U93Sphfx6xRZnY7qoIA9OwP&export=download
     #df = pd.read_csv("survey_results_public.csv")
     df = df[["Country", "EdLevel", "YearsCodePro", "Employment", "ConvertedComp"]]
     df = df[df["ConvertedComp"].notnull()]
